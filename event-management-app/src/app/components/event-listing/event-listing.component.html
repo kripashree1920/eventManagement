@@ -1,0 +1,67 @@
+
+   
+  <div class="event-listing-container">
+    <h2 class="section-title">Upcoming Events</h2>
+
+    <ng-container *ngIf="paginatedEvents.length > 0; else noEvents">
+      <div class="filter-section">
+    <div class="calendar-filter">
+      <mat-form-field appearance="fill">
+        <mat-label>Filter by Date</mat-label>
+        <input matInput [matDatepicker]="picker" [min]="today" (dateChange)="onDateChange($event)">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline" class="search-bar">
+      <mat-label>Search Events</mat-label>
+      <input matInput [(ngModel)]="searchEvents" (input)="applyFilter()" placeholder="Search by title or location">
+      <button *ngIf="searchEvents" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    </div>
+    
+    <div class="event-grid">
+      <mat-card *ngFor="let event of paginatedEvents" class="event-card" >
+        <button mat-icon-button color="primary" class="edit-icon" (click)="onEdit(event)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <img mat-card-image [src]="event.image" [alt]="event.title">
+        <mat-card-header>
+          <mat-card-title>{{ event.title }}</mat-card-title>
+          <mat-card-subtitle>{{ event.date }} | {{ event.location }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ event.description }}</p>
+        </mat-card-content>
+        <mat-card-actions >
+          <button mat-button color="warn" (click)="onDelete(event.id)">Delete Event</button>
+          <button mat-raised-button color="accent" (click)="moreInfo(event.id)">View More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <button *ngIf="selectedDate" mat-stroked-button color="primary" (click)="clearDateFilter()">Clear Date Filter</button>
+
+  
+    <div class="pagination">
+      <button mat-button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+      <button mat-button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= filteredEvents.length">Next</button>
+    </div>
+    </ng-container>
+
+
+    <ng-template #noEvents>
+      <div class="no-events-message">
+        <mat-icon color="warn" >sentiment_dissatisfied</mat-icon>
+        <p>Sorry, no such upcomping events found!</p>
+
+        <mat-card-actions >
+          <button mat-button color="warn" (click)="goToHome()">Go to EventList</button>
+        </mat-card-actions>
+      </div>
+    </ng-template>
+  </div>
+  

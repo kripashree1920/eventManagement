@@ -1,0 +1,27 @@
+
+  <div class="event-detail-container" *ngIf="event">
+    <mat-card class="event-detail-card">
+      <img mat-card-image [src]="event.image" alt="{{ event.title }}" />
+      <mat-card-content>
+        <h2>{{ event.title }}</h2>
+        <p><mat-icon>event</mat-icon> {{ event.date }}</p>
+        <p><mat-icon>place</mat-icon> {{ event.location }}</p>
+        <p><mat-icon>info</mat-icon> {{ event.description }}</p>
+  
+        <div class="additional-info">
+          <h4>Additional Details:</h4>
+          <ul>
+            <li><mat-icon color="accent">group</mat-icon> Organizer: EventMasters Pvt. Ltd.</li>
+            <li><mat-icon color="accent">email</mat-icon> Contact: wow@eventorganizer.com | 9000000000</li>
+            <li><mat-icon color="accent">payments</mat-icon> Price: Free / ₹1000</li>
+            <li><mat-icon color="accent">access_time</mat-icon> Time: 10 AM – 6 PM</li>
+          </ul>
+        </div>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="goBack()">Back to EventList</button>
+      </mat-card-actions>
+    
+    </mat-card>
+  </div>

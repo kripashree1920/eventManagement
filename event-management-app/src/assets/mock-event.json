@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "title": "Birthday Celebration",
+      "date": "2025-04-15",
+      "time": "18:00",
+      "location": "Bangalore, India",
+      "description": "Join us for an evening of fun and celebration!",
+     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoG4Nt49aFPbWUnkKKAE0Hnj7pRO1zt1SFRw&s"
+
+
+    },
+    {
+      "id": 2,
+      "title": "Tech Conference 2025",
+      "date": "2025-04-20",
+      "time": "09:00",
+      "location": "Mumbai, India",
+      "description": "Annual gathering of tech leaders and innovators.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRchbXSjRQTL1853VH_GdjK8KB1Synfd2Uwdw&s"
+    },
+    {
+      "id": 3,
+      "title": "Music Concert",
+      "date": "2025-05-28",
+      "time": "19:30",
+      "location": "Delhi, India",
+      "description": "Live performance by your favorite bands.",
+      "image": "https://5.imimg.com/data5/DB/WJ/MY-605509/music-concert.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Art Exhibition",
+      "date": "2025-06-30",
+      "time": "13:30",
+      "location": "kerala, India",
+      "description": "Discover the art of contemporary indian artist in a vibrant exhibition",
+      "image": "https://www.re-thinkingthefuture.com/wp-content/uploads/2022/10/A8291-What-is-the-purpose-and-importance-of-an-art-exhibition-Image-2.jpg?w=999"
+    },
+    {
+        "id": 5,
+        "title": "Art Exhibition 2",
+        "date": "2025-07-31",
+        "time": "16:30",
+        "location": "Manipal, India",
+        "description": "Discover the art of aspiring indian artist in a vibrant exhibition",
+        "image": "https://www.re-thinkingthefuture.com/wp-content/uploads/2022/10/A8291-What-is-the-purpose-and-importance-of-an-art-exhibition-Image-2.jpg?w=999"
+      },
+      {
+        "id": 6,
+        "title": "Art Exhibition 3",
+        "date": "2025-08-12",
+        "time": "16:30",
+        "location": "Punjab, India",
+        "description": "Discover the art of contemporary indian artist in a vibrant exhibition",
+        "image": "https://www.re-thinkingthefuture.com/wp-content/uploads/2022/10/A8291-What-is-the-purpose-and-importance-of-an-art-exhibition-Image-2.jpg?w=999"
+      }
+  ]
+  

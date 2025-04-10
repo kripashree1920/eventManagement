@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="app-toolbar">
+
+    <img src="../assets/eventLogo.png" alt="app-logo" class="app-logo">
+    <span class="logo"> {{ title }}</span>
+    <span class="divider"></span>
+
+    <div class="desktop-nav">
+        <a mat-button routerLink="/">Events</a>
+        <a mat-button routerLink="/createEvent">Add Event</a>
+    </div>
+
+    <div class="mobile-nav">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/">Events</button>
+          <button mat-menu-item routerLink="/createEvent">Add Event</button>
+        </mat-menu>
+    </div>
+
+  </mat-toolbar>
