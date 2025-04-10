@@ -6,7 +6,7 @@
     <ng-container *ngIf="paginatedEvents.length > 0; else noEvents">
       <div class="filter-section">
     <div class="calendar-filter">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="date-section">
         <mat-label>Filter by Date</mat-label>
         <input matInput [matDatepicker]="picker" [min]="today" (dateChange)="onDateChange($event)">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

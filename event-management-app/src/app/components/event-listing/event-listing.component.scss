@@ -114,3 +114,9 @@ mat-card-actions {
   flex: 1;
   min-width: 250px;
 }
+
+@media(max-width:746px){
+  .date-section{
+   width:100%;
+  }
+}

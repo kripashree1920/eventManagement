@@ -1,6 +1,16 @@
+
+
+
 <div class="form-container">
     <mat-card>
+      <div class="form-heading">
+      <div class="back-button">
+        <button mat-icon-button color="primary" (click)="router.navigate(['/'])">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </div>
       <mat-card-title>{{ eventId ? 'Edit Event' : 'Add Event' }}</mat-card-title>
+      </div>
       <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline">
           <mat-label>Title</mat-label>
